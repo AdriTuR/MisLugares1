@@ -21,7 +21,8 @@
             android:text="Mostrar Lugares"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:onClick="lanzarVistaLugar"/>
 
         <Button
             android:id="@+id/button2"
@@ -31,7 +32,8 @@
             android:text="Preferencias"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button" />
+            app:layout_constraintTop_toBottomOf="@+id/button"
+            android:onClick="lanzarPreferencias"/>
 
         <Button
             android:id="@+id/button03"

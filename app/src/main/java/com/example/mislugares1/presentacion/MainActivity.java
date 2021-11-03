@@ -9,17 +9,22 @@ package com.example.mislugares1.presentacion;
 //-----------------------------------------------------------------------------------------------//
 //-----------------------------------------IMPORTS-----------------------------------------------//
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import com.example.mislugares1.R;
+import com.example.mislugares1.casos_uso.CasosUsoLugar;
 import com.example.mislugares1.databinding.ActivityMainBinding;
+import com.example.mislugares1.datos.RepositorioLugares;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -35,7 +40,9 @@ public class MainActivity extends AppCompatActivity {
 //-----------------------------------------------------------------------------------------------//
 //-------------------------------------------ATRIBUTOS-------------------------------------------//
 
-private ActivityMainBinding binding;
+    private ActivityMainBinding binding;
+    private RepositorioLugares lugares;
+    private CasosUsoLugar usoLugar;
 
 //-----------------------------------------------------------------------------------------------//
 //-----------------------------------------------------------------------------------------------//
@@ -65,6 +72,10 @@ private ActivityMainBinding binding;
                         .setAction("Action", null).show();
             }
         });
+
+        //--------------------CASOS USO LUGAR-----------------------//
+        lugares = ((Aplicacion) getApplication()).lugares;
+        usoLugar = new CasosUsoLugar(this, lugares);
     }
 
 //-----------------------------------------------------------------------------------------------//
@@ -93,8 +104,10 @@ private ActivityMainBinding binding;
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
+
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+
             return true;
         }
 
@@ -102,6 +115,15 @@ private ActivityMainBinding binding;
             lanzarAcercaDe(null);
             return true;
         }
+
+        if (id == R.id.menu_buscar) {
+            lanzarVistaLugar(null);
+            return true;
+        }
+
+
+
+
 
         return super.onOptionsItemSelected(item);
     }
@@ -111,6 +133,33 @@ private ActivityMainBinding binding;
 
     public void lanzarAcercaDe(View view){
         Intent i = new Intent(this, AcercaDeActivity.class);
+        startActivity(i);
+    }
+
+//------------------------------------------------------------------//
+//-------------------------LanzarAcercaDe---------------------------//
+
+    public void lanzarVistaLugar(View view){
+        final EditText entrada = new EditText(this);
+        entrada.setText("0");
+        new AlertDialog.Builder(this)
+                .setTitle("Selección de lugar")
+                .setMessage("indica su id:")
+                .setView(entrada)
+                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        int id = Integer.parseInt(entrada.getText().toString());
+                        usoLugar.mostrar(id);
+                    }})
+                .setNegativeButton("Cancelar", null)
+                .show();
+    }
+
+//------------------------------------------------------------------//
+//-------------------------LanzarAcercaDe---------------------------//
+
+    public void lanzarPreferencias(View view){
+        Intent i = new Intent(this, PreferenciasActivity.class);
         startActivity(i);
     }
 

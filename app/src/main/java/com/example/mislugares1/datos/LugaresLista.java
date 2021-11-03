@@ -1,4 +1,7 @@
-package com.example.mislugares1;
+package com.example.mislugares1.datos;
+
+import com.example.mislugares1.modelo.Lugar;
+import com.example.mislugares1.modelo.TipoLugar;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,6 @@
-package com.example.mislugares1;
+package com.example.mislugares1.datos;
+
+import com.example.mislugares1.modelo.Lugar;
 
 public interface RepositorioLugares {
     Lugar elemento(int id); //Devuelve el elemento dado su id

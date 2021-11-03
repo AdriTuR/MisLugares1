@@ -3,10 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Adria/AndroidStudioProjects/MisLugares1/app/src/main/res/drawable/estrella.xml" value="0.2203125" />
+        <entry key="..\:/Users/Adria/AndroidStudioProjects/MisLugares1/app/src/main/res/drawable/fondo.xml" value="0.2203125" />
+        <entry key="..\:/Users/Adria/AndroidStudioProjects/MisLugares1/app/src/main/res/drawable/ic_mi_icono_background.xml" value="0.1125" />
+        <entry key="..\:/Users/Adria/AndroidStudioProjects/MisLugares1/app/src/main/res/drawable/ic_mi_icono_foreground.xml" value="0.1125" />
         <entry key="..\:/Users/Adria/AndroidStudioProjects/MisLugares1/app/src/main/res/layout/acercade.xml" value="0.17119565217391305" />
         <entry key="..\:/Users/Adria/AndroidStudioProjects/MisLugares1/app/src/main/res/layout/activity_main.xml" value="0.17572463768115942" />
         <entry key="..\:/Users/Adria/AndroidStudioProjects/MisLugares1/app/src/main/res/layout/content_main.xml" value="0.17119565217391305" />
         <entry key="..\:/Users/Adria/AndroidStudioProjects/MisLugares1/app/src/main/res/layout/edicion_lugar.xml" value="0.25" />
+        <entry key="..\:/Users/Adria/AndroidStudioProjects/MisLugares1/app/src/main/res/layout/listado_lugares.xml" value="0.15670289855072464" />
+        <entry key="..\:/Users/Adria/AndroidStudioProjects/MisLugares1/app/src/main/res/layout/vista_lugar.xml" value="0.17119565217391305" />
+        <entry key="..\:/Users/Adria/AndroidStudioProjects/MisLugares1/app/src/main/res/menu/menu_configuracion.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Adria/AndroidStudioProjects/MisLugares1/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2203125" />
+        <entry key="..\:/Users/Adria/AndroidStudioProjects/MisLugares1/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1125" />
+        <entry key="..\:/Users/Adria/AndroidStudioProjects/MisLugares1/app/src/main/res/xml/preferencias.xml" value="0.16168478260869565" />
       </map>
     </option>
   </component>

@@ -1,4 +1,4 @@
-package com.example.mislugares1;
+package com.example.mislugares1.modelo;
 
 import java.util.Objects;
 
